@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "spdy": "^4.0.2",
     "json-server": "^0.16.3",
     "jsonwebtoken": "^8.1.0"
   }

@@ -11,10 +11,23 @@ Essa é ma API Rest mockada, utilizando json-server e JWT.
 
 ## 🛠️ Instalação
 
+### Configurando o HTTP/2
+
+Essa versão já vem com HTTP/2 habilitado através da biblioteca [spdy](https://www.npmjs.com/package/spdy).
+Como o HTTP/2 requer uso de TLS, precisamos gerar um certificado self-signed.
+Faça isso antes de executar o servidor, com o seguinte comando:
+
+```bash
+$ openssl req -x509 -sha256 -nodes -days 365 -newkey ec -pkeyopt ec_paramgen_curve:secp256k1 -keyout server.key -out server.crt
+```
+
+### Instalando dependências e executando o servidor
+
 ```bash
 $ npm install
 $ npm run start-auth
 ```
+
 ## 🛠️ Como se registrar?
 
 Você pode fazer isso efetuando uma requisição post para:
