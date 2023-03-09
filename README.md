@@ -10,6 +10,18 @@ O AluraBooks é uma loja virtual que vende livros da Casa do Código.
 Essa é ma API Rest mockada, utilizando json-server e JWT.
 
 ## 🛠️ Instalação
+### Configurando o HTTPS
+
+Essa versão já vem com HTTPS habilitado através do módulo `https` do `express`.
+Para que o HTTPS funcione, precisamos gerar um certificado self-signed.
+Faça isso antes de executar o servidor, com o seguinte comando:
+
+```bash
+$ openssl req -x509 -sha256 -nodes -days 365 -newkey ec -pkeyopt ec_para
+mgen_curve:secp256k1 -keyout server.key -out server.crt
+```
+
+### Instalando dependências e executando o servidor
 
 ```bash
 $ npm install
